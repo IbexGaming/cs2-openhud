@@ -1,5 +1,5 @@
 # Ibex Gaming Circuit CS2 Hud
-This is the official Ibex Gaming Circuit HUD for JohnTimmermann/OpenHud
+This is the official Ibex Gaming Circuit HUD for [JohnTimmermann/OpenHud](https://github.com/JohnTimmermann/OpenHud)
 
 ## Preview
 
