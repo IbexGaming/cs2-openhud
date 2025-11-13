@@ -32,17 +32,17 @@ export const apiRequest = async (url: string, method = "GET", body?: any) => {
 export const api = {
   matches: {
     getAll: async (): Promise<Types.Match[]> => apiRequest(`matches`),
-    getCurrent: async (): Promise<Types.Match> => apiRequest(`current_match`),
+    getCurrent: async (): Promise<Types.Match> => apiRequest(`api/match/current`),
   },
   teams: {
     getAll: async (): Promise<Types.Team[]> => apiRequest(`teams`),
     getTeam: async (id: string): Promise<Types.Team> =>
-      apiRequest(`teams/${id}`),
+      apiRequest(`api/teams/${id}`),
   },
   players: {
     getAll: async (steamids?: string[]): Promise<Types.Player[]> =>
       apiRequest(
-        steamids ? `players?steamids=${steamids.join(";")}` : `players`
+        steamids ? `api/players?steamids=${steamids.join(";")}` : `players`
       ),
     // getAvatarURLs: async (
     //   steamid: string

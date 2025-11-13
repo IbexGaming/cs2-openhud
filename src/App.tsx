@@ -42,7 +42,7 @@ const App = () => {
                 id: left._id,
                 name: left.name,
                 country: left.country,
-                logo: left.logo,
+                logo: 'http://localhost:1349/api/teams/logo/'+left._id,
                 map_score: match.left.wins,
                 extra: left.extra,
               };
@@ -58,7 +58,7 @@ const App = () => {
                 id: right._id,
                 name: right.name,
                 country: right.country,
-                logo: right.logo,
+                logo: 'http://localhost:1349/api/teams/logo/'+right._id,
                 map_score: match.right.wins,
                 extra: right.extra,
               };

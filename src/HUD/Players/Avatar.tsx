@@ -17,9 +17,10 @@ interface AvatarProps {
 
 const getAvatar = async (steamid: string) => {
   try {
-    const player = await axios.get(`http://localhost:1349/players/${steamid}`);
-    if (player.data.avatar) {
-      return player.data.avatar;
+    const player = await axios.get(`http://localhost:1349/api/players/avatar/steamid/${steamid}`);
+    console.log(player.data.custom)
+    if (player.data.custom) {
+      return player.data.custom;
     }
     return null;
   } catch (error) {
