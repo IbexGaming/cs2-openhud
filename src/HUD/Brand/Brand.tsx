@@ -5,7 +5,7 @@ import "./brand.scss";
 const Brand: React.FC = () => {
     return (
         <div className="brand">
-            <img src="/Circuit-Long.png" alt="Logo" />
+            <img src="./Circuit-Long.png" alt="Logo" />
         </div>
     );
 };
