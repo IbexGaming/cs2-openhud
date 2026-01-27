@@ -1,7 +1,7 @@
 .observed_container {
   position: fixed;
   width: 22rem;
-  bottom: 5%;
+  bottom: 8%;
   left: 50%;
   transform: translateX(-50%);
   height: 150px;
@@ -33,8 +33,6 @@
     width: 100%;
     height: 6%;
     display: flex;
-    padding-left: 8px;
-    padding-right: 8px;
     padding-bottom: 8px;
     background-color: var(--sub-panel-color);
     .healthbar_holder {
@@ -71,8 +69,6 @@
     align-items: center;
     gap: 3px;
     background-color: var(--sub-panel-color);
-    padding-left: 8px;
-    padding-right: 8px;
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
 

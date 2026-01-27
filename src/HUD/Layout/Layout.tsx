@@ -17,6 +17,7 @@ import Timeout from "../PauseTimeout/Timeout";
 import { CSGO } from "csgogsi";
 import { Match } from "../../API/types";
 import { useAction } from "../../API/contexts/actions";
+import Brand from "../Brand/Brand";
 interface Props {
   game: CSGO;
   match: Match | null;
@@ -88,6 +89,8 @@ const Layout = ({ game, match }: Props) => {
       {/* <Tournament /> */}
 
       <Observed player={game.player} />
+
+      <Brand />
 
       <TeamBox
         team={left}

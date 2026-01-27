@@ -1,0 +1,16 @@
+.brand{    
+    display: flex;
+    position: fixed;
+    width: 22rem;
+    bottom: 2%;
+    transform: translateX(-50%);
+    left: 50%;
+    height: 50px;
+    // background-color: red;
+    margin: auto;
+    justify-content: center;
+    background-color: var(--sub-panel-color);
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-radius: 5px;
+}

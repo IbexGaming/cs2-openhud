@@ -1,7 +1,7 @@
 {
-  "name": "OpenHud CS2 Default HUD",
-  "version": "1.0.1",
-  "author": "John Timmermann",
+  "name": "Ibex Gaming Circuit HUD",
+  "version": "0.2",
+  "author": "Kimmo Hauri",
   "legacy": false,
   "radar": true,
   "killfeed": false,

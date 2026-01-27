@@ -10,7 +10,7 @@
     .obs_slot {
       background-color: var(--color-new-ct);
     }
-    .player-stats svg {
+    .player_info .economy_stats svg {
       fill: var(--color-new-ct);
     }
   }
@@ -19,7 +19,7 @@
     .obs_slot {
       background-color: var(--color-new-t);
     }
-    .player-stats svg {
+    .player_info .economy_stats svg {
       fill: var(--color-new-t);
     }
   }
@@ -51,6 +51,22 @@
         }
       }
     }
+    .player.dead {
+      .player_data {
+        .top_row {
+          .player_info {
+            .username,
+            .economy_stats .money,
+            .economy_stats .player-kills,
+            .economy_stats .player-deaths,
+            .economy_stats .roundkills {
+              padding-left: 1rem;
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
   }
   .weapon.zeus {
     height: 30px;
@@ -73,6 +89,16 @@
         }
         .top_row {
           flex-direction: row-reverse;
+          .player_info {
+            align-items: flex-end;
+            margin-left: 1em;
+            .username {
+              text-align: right;
+            }
+            .economy_stats {
+              justify-content: flex-end;
+            }
+          }
           .defuser_bomb {
             right: 4px;
           }
@@ -102,6 +128,22 @@
 
           .weapon {
             transform: scaleX(-1);
+          }
+        }
+      }
+    }
+    .player.dead {
+      .player_data {
+        .top_row {
+          .player_info {
+            .username,
+            .economy_stats .money,
+            .economy_stats .player-kills,
+            .economy_stats .player-deaths,
+            .economy_stats .roundkills {
+              padding-right: 1rem;
+              padding-left: 0;
+            }
           }
         }
       }
@@ -150,6 +192,7 @@
         height: 65%;
         .avatar {
           flex: 1;
+          max-width: 40%;
           display: flex;
           align-items: flex-end;
           justify-content: center;
@@ -159,13 +202,13 @@
             height: 65px;
           }
         }
-        .username_money {
-          display: flex;
-          gap: 2px;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
+        .player_info {
           flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          align-items: baseline;
+          justify-content: center;
           .username {
             display: flex;
             align-items: center;
@@ -173,14 +216,46 @@
             color: white;
             font-weight: 600;
             font-size: 18px;
+            text-align: center;
           }
-          .money {
-            color: var(--primary-light);
-            font-weight: 700;
-            font-size: 13px;
+          .economy_stats {
             display: flex;
+            gap: 8px;
             align-items: center;
             justify-content: center;
+            .money {
+              color: var(--primary-light);
+              font-weight: 700;
+              font-size: 13px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .player-kills,
+            .player-deaths {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+              font-weight: 600;
+              font-size: 14px;
+              color: white;
+              svg {
+                width: 14px;
+                height: 14px;
+              }
+            }
+            .roundkills {
+              width: 16px;
+              height: 16px;
+              border-radius: 16px;
+              background-color: white;
+              display: flex;
+              justify-content: center;
+              color: black;
+              align-items: center;
+              font-weight: 700;
+              font-size: 10px;
+            }
           }
         }
         .defuser_bomb {
@@ -195,44 +270,6 @@
           }
           .defuse_indicator {
             fill: var(--color-new-ct);
-          }
-        }
-        .player-stats {
-          flex: 1;
-          display: flex;
-          font-weight: 600;
-          font-size: 14px;
-          color: white;
-          align-items: center;
-          .statistics {
-            margin-top: 10px;
-            display: flex;
-            gap: 8px;
-            flex: 1;
-            justify-content: center;
-            align-items: end;
-            .player-kills,
-            .player-deaths {
-              display: flex;
-              align-items: center;
-              gap: 4px;
-              svg {
-                width: 14px;
-                height: 14px;
-              }
-            }
-            .roundkills {
-              position: absolute;
-              top: 3px;
-              width: 16px;
-              height: 16px;
-              border-radius: 16px;
-              background-color: white;
-              display: flex;
-              justify-content: center;
-              color: black;
-              align-items: center;
-            }
           }
         }
       }
@@ -332,15 +369,15 @@
       .player_data {
         .top_row {
           height: 100%;
-          .username_money {
+          .player_info {
             .username,
-            .money {
+            .economy_stats .money,
+            .economy_stats .player-kills,
+            .economy_stats .player-deaths,
+            .economy_stats .roundkills {
               color: #b2b2b2;
             }
-          }
-          .statistics {
-            margin-top: 0px;
-            .roundkills {
+            .economy_stats .roundkills {
               background-color: #b2b2b2;
             }
           }
@@ -365,12 +402,6 @@
         }
         .avatar {
           display: none;
-        }
-        .player-stats {
-          color: #b2b2b2;
-          svg {
-            fill: #b2b2b2;
-          }
         }
       }
     }

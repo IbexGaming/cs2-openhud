@@ -114,12 +114,10 @@ const Player = ({ player, isObserved }: IProps) => {
             sidePlayer={true}
             teamSide={player.team.side}
           />
-          <div className="username_money">
+          <div className="player_info">
             <div className="username">{player.name}</div>
-            <div className="money">${player.state.money}</div>
-          </div>
-          <div className="player-stats">
-            <div className="statistics">
+            <div className="economy_stats">
+              <div className="money">${player.state.money}</div>
               <div className="player-kills">
                 <Kills />
                 <div className="stat-value">{player.stats.kills}</div>
